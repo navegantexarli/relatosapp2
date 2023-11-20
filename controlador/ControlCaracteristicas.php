@@ -117,7 +117,7 @@ class ControlCaracteristicas extends Controlador {
 		// se instancia el buscador
 		$buscador = new Buscador();
 
-		// se buscan todos los personajes q3
+		// se buscan todos los personajes q5
 		$buscador->limitar(false);
 		$arrPersonajes = $buscador->buscarPersonajes();
 
