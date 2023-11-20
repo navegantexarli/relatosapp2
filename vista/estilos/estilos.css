@@ -1,0 +1,220 @@
+/* ------------------------------------------------------------------------------------------
+ESTILOS DEL BODY
+------------------------------------------------------------------------------------------ */
+
+/* 	Fondo para todo el body */
+body {
+	background-color: Purple;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------
+ESTILOS DE ÁREAS DE TRABAJO
+------------------------------------------------------------------------------------------ */
+
+/* 	El area de trabajo será más estrecha que la ventana 
+	porque es demasiado ancha y se alarga mucho los objetos.
+	Ahora sí que la podemos alargar al gusto en cuanto a margin top */
+div.areaTrabajo {
+	width: 60%;
+	margin: 40px auto;
+	background-color: Violet;
+}
+
+/* Margen para el título de cada sección o página */
+div.tituloPagina {
+	margin: 0px 0px 25px 0px;
+	padding: 25px 0px 0px 0px;
+	text-align: center;
+}
+
+/* Pading hacia todos lados excepto hacia abajo porque ya está dado por la tabla */
+div.areaFormulario {
+	padding: 50px 50px 0px 50px;
+	background-color: Violet;
+}
+
+/* Area de login con pading a los cuatro lados */
+div.areaLogin, 
+div.areaTabla, 
+div.areaParrafo, 
+div.areaVisualizacion {
+	padding: 50px;
+	background-color: Violet;
+}
+
+/* área para separar las filas de input */
+div.areaInput, 
+div.areaIniciarProceso, 
+div.areaProgreso, 
+div.areaMensajes, 
+div.areaTextarea,
+div.accionesParrafo {
+	padding: 0px 0px 25px 0px;
+}
+
+/* área para separar todo el bloque de imágenes */
+div.areaFilaImagenes {
+	margin:40px;
+}
+
+/* área para separar el botón eliminar de cada imagen */
+div.areaEliminarImagen {
+	padding: 15px;
+	margin: 0px 0px 25px 0px;
+}
+
+/* área para incluir las tarjeas con las instrucciónes */
+div.areaTarjetasInstrucciones {
+	align-content: center;
+}
+
+div.areaVisualizacion div.areaCeldaImagen {
+	margin: 0px 0px 25px 0px;	
+}
+
+div.areaVisualizacion p.texto {
+	padding: 0px 25px 0px 0px;
+}
+
+div.areaVisualizacion div.areaProgreso {
+	margin: 100px 0px 0px 0px;	
+}
+
+
+/* -------------------------------------------------------------------------------------------
+ESTILOS DE LAS TABLAS
+------------------------------------------------------------------------------------------- */
+
+/* Definición del cursor sobre las celdas */
+td:hover, 
+div.areaEliminarImagen i:hover {
+	cursor:pointer;
+}
+
+table {
+	font-family: Helvetica, sans-serif;
+	font-size: medium;
+	 border-spacing: 0px;
+}
+
+th {
+	text-align: left;
+}
+
+th.columnaCentrada, 
+td.columnaCentrada {
+	text-align: center;	
+}
+
+p.numRegistros {
+	text-align: right;
+}
+
+tr.datosTabla i:hover {
+	color: white !important;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------
+ESTILOS DE BOTONES
+------------------------------------------------------------------------------------------ */
+
+button.outlineViolet {
+	border-color: Violet;
+	color: violet;
+} 
+
+button.outlinePurple, 
+button.outlinePurpleInactivo {
+	border-color: purple;
+	color: purple;
+	cursor: none;
+}
+
+button span.badge {
+	color: violet !important;
+	background-color: purple !important;
+
+}
+
+
+
+/* ------------------------------------------------------------------------------------------
+ESTILOS DEL CUERPO DE PARRAFO
+------------------------------------------------------------------------------------------ */
+
+div.areaVisualizacion p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.5em;
+	font-style: italic;
+	text-align: justify;
+	text-justify: inter-word;	
+}
+
+div.areaDelimitadoraParrafo {
+	background-color: #CC60CC;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.areaDelimitadoraParrafo div.row {
+	padding: 10px 10px 0px 10px;
+	margin: 0px;
+}
+
+div.areaDelimitadoraParrafo div.input {
+	padding: 0px 0px 10px 0px;
+}
+
+div.areaDelimitadoraParrafo div.rango {
+	padding: 0px 10px 0px 10px;
+}
+
+div.areaDelimitadoraParrafo div.row p {
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+	font-size: 1.1em;
+	font-style: italic;
+	text-align: left;
+	text-justify: inter-word;	
+}
+
+div.areaDelimitadoraParrafo div.rango div {
+	padding: 0px;
+}
+
+div.areaSeparadora {
+	margin: 25px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------
+OTROS ESTILOS
+------------------------------------------------------------------------------------------ */
+
+/* Ajuste de la barra de niveles a su ubicación */
+div.rangoMedio {
+	width: 90%;
+}
+
+/* Ajuste de la barra de niveles del párrafo a su ubicación */
+div.rangoNivelParrafo {
+	width: 100%;
+}
+
+.ml-2 {
+	margin-left: .5rem !important;
+}
+
+.pl-0 {
+	padding-left: .0rem !important;
+}
+
+a.itemMenu:hover {
+	color: darkorange !important;
+}
+

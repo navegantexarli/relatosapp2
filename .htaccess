@@ -1,0 +1,42 @@
+# Previamente hay que configurar el fichero de configuración de apache:
+# abrir el fichero: /etc/apache2/sites-available/cangulo.conf
+# la directiva "AllowOverride none" hay que modificarla a "AllowOverride all"
+# reiniciar apache: sudo service apache2 restart 
+# para revisar los posibles errores, acudir al log: joe /var/log/apache2/error.log
+# activar module_rewrite ejecutando en una terminal los siguientes comandos:
+#    a2enmod rewrite
+#    systemctl restart apache2
+
+
+# se inicializa la configuración
+Options +FollowSymLinks
+RewriteEngine on
+
+
+# se incluye la siguiente linea para que htaccess pueda interpretar ficheros php
+AddType application/x-httpd-php .php
+
+
+# Rutas:
+# No hace falta definir rutas cuando por ejemplo /fichero/ = fichero.php porque
+# ya viene definido de base. Por ejemplo, los menús de esta aplicación
+
+# ruta original: /relatosapp/valorespalabraclave.php?idpc="+idPalabraClave
+# llamada realizada: /relatosapp/palabraclave/"+idPalabraClave+"/valores/
+RewriteRule ^palabraclave/([0-9]+)/valores/$ valorespalabraclave.php?idpc=$1
+
+# ruta original: /relatosapp/visualizador.php?idr="+idRelato
+# llamada realizada: /relatosapp/relato/"+idRelato+"/visualizador/
+RewriteRule ^relato/([0-9]+)/visualizador/$ visualizador.php?idr=$1
+
+# ruta original: /relatosapp/parrafo.php?idg="+idGuion+"&idpf="+idParrafo
+# llamada realizada: /relatosapp/guion/"+idGuion+"/parrafo/"+idParrafo
+RewriteRule ^guion/([0-9]+)/parrafo/([0-9]+)$ parrafo.php?idg=$1&idpf=$2
+
+# ruta original: /relatosapp/personajerelaciones.php?idp="+idPersonaje
+# llamada original: /relatosapp/personaje/"+idPersonaje+"/relaciones/
+RewriteRule ^personaje/([0-9]+)/relaciones/$ personajerelaciones.php?idp=$1
+
+# ruta original: /relatosapp/personajeimagenes.php?idp="+idPersonaje
+# llamada original: /relatosapp/personaje/"+idPersonaje+"/imagenes/
+RewriteRule ^personaje/([0-9]+)/imagenes/$ personajeimagenes.php?idp=$1
