@@ -23,11 +23,7 @@ CUERPO DE LA VISTA
 		<h1>Guiones</h1>
 	</div>
 
-<<<<<<< HEAD
-	<!-- se define la vista activa q5 más cambios ahora trabajo2  -->
-=======
 	<!-- se define la vista activa -->
->>>>>>> master
 	<?php $vistaActiva = 'VistaGuiones'; ?>
 
 	<!-- menú principal de la aplicación -->
