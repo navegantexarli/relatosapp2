@@ -13,7 +13,7 @@ include_once ("modelo/Buscador.php");
 class ControlCaracteristicas extends Controlador {
 
 	/* *******************************************************************************************
-	 * CONSTRUCTOR
+	 * CONSTRUCTOR q1 q2 q3 q4
 	 * ***************************************************************************************** */
 	
 	function __construct() {
